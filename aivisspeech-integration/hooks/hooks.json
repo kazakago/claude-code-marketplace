@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "nohup ${AIVIS_SPEECH__PATH:-/Applications/AivisSpeech.app/Contents/Resources/AivisSpeech-Engine/run} > /dev/null 2>&1 &"
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/scripts/inject-context.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

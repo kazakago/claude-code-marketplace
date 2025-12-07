@@ -1,0 +1,18 @@
+{
+    "name": "kazakago-marketplace",
+    "owner": {
+        "name": "kazakago"
+    },
+    "plugins": [
+        {
+            "name": "aivisspeech-integration",
+            "source": "./aivisspeech-integration",
+            "description": "AivisSpeech integration"
+        },
+        {
+            "name": "feminine-tone",
+            "source": "./feminine-tone",
+            "description": "Feminine tone"
+        }
+    ]
+}
