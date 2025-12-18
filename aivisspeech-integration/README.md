@@ -6,7 +6,7 @@ ClaudeCodeの返答を[AivisSpeech Engine](https://github.com/Aivis-Project/Aivi
 
 ## Getting Started
 
-1. AivisSpeechをダウンロードして初回モデルDLまで済ませておいてください。  
+1. AivisSpeechをダウンロードして初回起動まで済ませておいてください。  
 https://aivis-project.com/
 
 2. ClaudeCode上で本Pluginをインストールして有効化します。  
