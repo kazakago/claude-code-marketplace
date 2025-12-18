@@ -15,7 +15,7 @@ https://aivis-project.com/
 /plugin install aivisspeech-integration
 ```
 
-3. おわり
+3. Claudeに話しかければ喋ってくれるはず
 
 ## How it works
 
