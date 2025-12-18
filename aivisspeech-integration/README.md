@@ -16,7 +16,7 @@ https://aivis-project.com/
 /plugin install aivisspeech-integration
 ```
 
-3. AivisSpeechが起動してる場合は終了させたうえでClaudeCodeを再起動する
+3. AivisSpeechを終了させたうえで、ClaudeCodeを再起動します。
   
 4. 話しかければ喋ってくれるはず
 
