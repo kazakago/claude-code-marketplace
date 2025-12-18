@@ -1,11 +1,12 @@
 # AivisSpeech Integration
 
 ClaudeCodeの返答を[AivisSpeech Engine](https://github.com/Aivis-Project/AivisSpeech-Engine)経由で音声で喋らせるためのプラグインです。  
+[femine-tone](https://github.com/kazakago/claude-code-marketplace/tree/main/feminine-tone)と一緒に使うと、っぽい感じになるかもしれません。  
 動作確認はMacでしかしてません。  
 
 ## Getting Started
 
-1. AivisSpeechをダウンロードしてモデルDLまで済ませておいてください。  
+1. AivisSpeechをダウンロードして初回モデルDLまで済ませておいてください。  
 https://aivis-project.com/
 
 2. ClaudeCode上で本Pluginをインストールして有効化します。  
@@ -15,13 +16,15 @@ https://aivis-project.com/
 /plugin install aivisspeech-integration
 ```
 
-3. Claudeに話しかければ喋ってくれるはず
+3. AivisSpeechが起動してる場合は終了させたうえでClaudeCodeを再起動する
+  
+4. 話しかければ喋ってくれるはず
 
 ## How it works
 
-Hooksをトリガーにセッション開始時にAivisSpeech Engineサーバーを起動します。  
-そのうえでadditionalContextとして返答をサーバーに投げて読み上げさせるコンテキストを一度だけ流し込んでいます。
-再生処理はバックグラウンドで行われるため音声終了を待たずに次の処理へ進みます。
+セッション開始時にHooksをトリガーにAivisSpeech Engineサーバーを起動させています。  
+そのうえでadditionalContextとして返答をサーバーに投げて読み上げさせるコンテキストを一度だけ流し込んでいます。  
+再生処理はバックグラウンドで行われるため音声終了を待たずに次の処理へ進みます。  
 
 またAivisSpeechのAPIはVOICEVOX互換であるため、[VOICEBOX ENGINE](https://github.com/VOICEVOX/voicevox_engine)でも環境変数をチューニングすれば動きます。  
 
@@ -55,3 +58,4 @@ AivisSpeechのスピーカーのスタイルIDを指定します。
 - 起動したAivisSpeechEngineサーバーは自動的には終了しません。
 - Claudeの回答が立て続けに流し込まれても音声は同時に再生されないようにはなってますが、2つ以上詰まると順番は保証されません。
 - 返答ごとにClaudeがBash実行するのでそのぶん多少なりともコンテキストを食います。
+- AivisSpeechないしVOICEVOXはそれぞれの規約の範疇でご利用ください。
